@@ -1,7 +1,7 @@
 HTTP Protocol
 -------------
 
-1. HTTP is a **HyperText Transfer Protocol**, it is a layer 7(Application layer) protocol. At layer 4(Transport layer) it uses TCP protocol. At layer 4, TCP connection will be made between client and the server. At layer 7, the HTTP connection will be made between browser and the application.
+1. HTTP is a **HyperText Transfer Protocol**, it is a layer 7(Application layer) protocol. At layer 4(Transport layer) it uses TCP protocol. At layer 4, TCP connection will be made between client and the server and at layer 7, the HTTP connection will be made between browser and the application.
 2. Suppose there are set of clients which are connected to a server, each of them maintaining the HTTP connection to have a request. The main use HTTP in every website is loading the initial HTML/JS website(images, videos, name, logo, etc.), i.e to **fetch the assests and load the website** in your browser. Later you can start interating with the server. HTTP is considered the basis for **data communication between networked devices**.
 
 #### How does HTTP and TCP work with each other ?
