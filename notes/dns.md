@@ -20,4 +20,9 @@
       of 4 types. 
    2. **Recursive resolvers** : These are provided by your ISP's (like godaddy, etc). If they have cached mapping of DNS mapping to IP address, then give back. 
       This is quite faster. If not, they make a further call to **root nameserver**.
-   3. **Root nameservers** : 
+   3. **Root nameservers** : A root nameserver accepts a recursive resolvers query which includes a domain name and the root nameserver responds by directing the recursive resolver to a TLD nameserver, based on the extension of that domain (.com, .org, .gov, .net, etc). 
+   4. **TLD nameserver** : When a recursive resolver receives a response from a TLD nameserver, that response will direct the resolver to an authoritative nameserver, also if they don't have cache.
+   5. **Authoritative nameserver** : The authoritative nameserver is usually the resolver’s last step in the journey for an IP address. The authoritative nameserver contains information specific to the domain name it serves (e.g. google.com) and it can provide a recursive resolver with the IP address. These are generally owned by the organizations that have bought the domain.
+   6. Now, when you buy a domain from godaddy or any other website, they do the hosting for you. They basically act as the authoritative nameserver for the domain which you bought. You can also run your own authoritative server. 
+   7. **DNS Registry** : The authoritative server contains the zone file containing the required resource records which is fetched from the distributed DNS database called the DNS registry. These are generally maintained by different organizations for different Top-level domains.
+
