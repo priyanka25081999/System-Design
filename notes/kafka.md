@@ -19,7 +19,8 @@
    Each message which is stored in the log file contains the actual message along with the offset(number of messages in the file + 1) at which it occurs.
 
 7. The messages as they come are written **sequentially in one of the partitions for that topic**.
-   Each partition can be consumed by **only one consumer at a time**.(this is a kafka requirement). 
+   Each partition can be consumed by **only one consumer at a time**.(this is a kafka requirement, a consumer can read from multiple partitions. 
+   But, one partition can be read from just one consumer.). 
 
 8. A common operation in Kafka is to **read the message at a particular offset**. How will we find this offset? By Scanning the log file ? 
    But, scanning will take a lot of time. This is where the **index file** comes to help which stores the physical address for each offset.
