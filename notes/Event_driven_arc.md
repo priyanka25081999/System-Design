@@ -1,4 +1,4 @@
-**Event-Driven architecture (EDA) :**
+**Event-Driven architecture (EDA):**
        
 * It is a way of designing lossely coupled applications and services that respond to real-time information based on sending and receiving of events. 
 * In the traditional RPC, one service can only contact to another service. This creates a tight coupling between the services. They are communicating with one another
