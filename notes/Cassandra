@@ -1,0 +1,24 @@
+Cassandra:
+
+Avinash Lakshman, one of the authors of Amazon's Dynamo, and Prashant Malik initially developed Cassandra at Facebook to power the Facebook inbox search feature.
+
+1. Facebook released Cassandra as an open-source project. Cassandra now powers amazing tech products like Discord. Let’s see what Cassandra is and how Cassandra works.
+
+2. Cassandra is a column-family store. A column-family store ensures data locality at the partition level. In a database like Cassandra, a partition is a group of rows and columns split up by a specified partition key. To query Cassandra, you must know, at a minimum, the partition key in order to avoid full scans of your data.
+
+
+3. One important Cassandra attribute is that its databases are distributed. Cassandra databases easily scale when an application is under high stress, and the distribution also prevents data loss from any given datacenter’s hardware failure.
+
+4. "Distributed" means that Cassandra can run on multiple machines while appearing to users as a unified whole.
+
+5. Since it is a distributed database, Cassandra can (and usually does) have multiple nodes. A node represents a single instance of Cassandra. These nodes communicate with one another through a protocol called gossip, which is a process of computer peer-to-peer communication.
+
+6. Cassandra also has a masterless architecture – any node in the database can provide the exact same functionality as any other node – contributing to Cassandra’s robustness and resilience. Multiple nodes can be organized logically into a cluster, or "ring".
+
+7. In Cassandra, the data itself is automatically distributed, with (positive) performance consequences. It accomplishes this using partitions. Each node owns a particular set of tokens, and Cassandra distributes data based on the ranges of these tokens across the cluster.
+
+8. The partition key is responsible for distributing data among nodes and is important for determining data locality. When data is inserted into the cluster, the first step is to apply a hash function to the partition key. The output is used to determine what node will get the data.
+
+9. When data comes in, the database’s coordinator takes on the job of assigning to a given partition. Any node in the cluster can take on the role as the coordinator. Nodes gossip to one another; during which they communicate about which node is responsible for what ranges.
+
+10. The coordinator node isn’t a single location; the system would be fragile if it were. It’s simply the node that gets the request at that particular moment. Any node can act as the coordinator.
