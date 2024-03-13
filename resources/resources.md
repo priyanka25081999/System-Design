@@ -8,3 +8,5 @@
 ☘️ Design a Hit Counter: https://bit.ly/3GMrbd4
 ☘️ Cowin System Design: https://bit.ly/3UDLmzg
 ☘️ Machine Learning System Design - A framework for the interview day: https://bit.ly/3A8AJuR
+☘️ Ajay Kumbhar Design pattern resource - [System Design Interview: https://bit.ly/3oeVQcy
+](https://techwithaly.ongraphy.com/s/courses/63cf986ee4b0af8efbf84334/take?freecourseenrol=success)https://techwithaly.ongraphy.com/s/courses/63cf986ee4b0af8efbf84334/take?freecourseenrol=success
