@@ -14,3 +14,15 @@
 * Reduced coupling
 * Near real-time latency
 * Fine-grained scaling
+
+**Examples:**
+* Git
+* React
+* Node.js
+* Game servers - headshots (avoid delay in movements between 2 players)
+
+**Key points:**
+* Producer produces the event and store in event bus, consumer consumes and stores in the local database, this storage is required as event bus vanish the event.
+* Adv: availiability, easy roll-back, transaction guarantee (at least once - UDP, at most once - TCP try and try again until succeed), easy replacements, stores intent (add new consumers easily)
+* Disadv: consistency issue, N/A responses to gateway, Compaction - lesser fine tuned control, Replay from start, Undo (checkpoint), diff based (incremental) to store data,
+  Flow of the program is not easy to understand (hidden flow), Migration issues 
