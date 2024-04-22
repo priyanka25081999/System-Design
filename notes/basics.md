@@ -13,6 +13,7 @@ Jordan has no life - Playlist - https://www.youtube.com/watch?v=bwt09KXDH94&list
           but also updating the associated indexes. This additional overhead of maintaining indexes during write operations can slow down the process.
 
 2. Hash Indexes:
+
     * 
        
     
