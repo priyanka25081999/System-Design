@@ -14,6 +14,17 @@ Jordan has no life - Playlist - https://www.youtube.com/watch?v=bwt09KXDH94&list
 
 2. Hash Indexes:
 
-    * 
-       
+    * We are here bcz of 2 reasons: 1. O(N) read 2. Go through each and every record/row
+    * Hash function -> HashFunction(Key) --->(returns)--> value, so we then store this key and value in an array for example. So it allows O(1) read and write
+    * It might possible that 2 keys can get same value when using hash function, so in that case, we can apply chaining.
+    * Issues with hash maps:
+         1. Hash maps are bad on disk - Using hash function we can get any values (evenly distributed) so on disk it's also stored in distributed way. Hence the performance is very poor.
+            That means, hash indexes are always kept in memory. but it also has few other issues. One is that the memory is expensive. Also RAM is not durable, its volatile. 
+            To overcome it, we use WAL (Write Ahead Log) - Using it we can repopulate the hash index even if the data in RAM is lost.
+         2. We can't do range queries - If we want to get specific key then using hash map we can do it in o(1) but if we want to get from key1 to keyN then we literally have to loop through
+            all the keys between key1 and keyN, its not feasible, bcz there can be multiple names between key1 and keyN. So, its again O(N) and we need a better solution to fix it.
+            We can might think of binary search tree for range queries which can work more better for range queries but then for read and write it takes O(logN) which is worse than hash indexes.
+      * Conclusion - Hash indexes are good for read and write, both O(1) time. But not good for range queries. But, its good for small data sets.
+
+3. B-Tree Indexes:
     
