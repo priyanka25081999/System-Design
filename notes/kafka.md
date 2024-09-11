@@ -40,3 +40,23 @@
         d. Instead of storing all the messages into a partition, it is split into chunks called segments. 
         e. Whenever a segment has reached its max value, a new segment is created, and it becomes the new active segment.
         f. Inside the partition’s directory in the Kafka data directory, the segments can be viewed as index and log files.
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+𝗞𝗮𝗳𝗸𝗮 𝗜𝗻𝘁𝗲𝗿𝘃𝗶𝗲𝘄 𝗤𝘂𝗲𝘀𝘁𝗶𝗼𝗻𝘀:
+
+* Basic Level:
+1. What is Apache Kafka, and what are its core components?
+2. Explain the difference between a topic, partition, and segment.
+3. How does Kafka ensure message ordering?
+4. What is a consumer group in Kafka?
+
+* Intermediate Level:
+1. How does Kafka achieve fault tolerance? 
+2. Explain Kafka's partitioning strategy and how it impacts performance.
+3. Describe Kafka's consumer offset management.
+
+* Advanced Level:
+1. Explain the concept of exactly-once semantics (EOS) in Kafka.
+2. How would you monitor and optimize Kafka performance in a production environment? 
+3. How would you design a Kafka-based system to guarantee data consistency in the event of node failures?
